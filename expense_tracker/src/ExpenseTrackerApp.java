@@ -28,6 +28,12 @@ public class ExpenseTrackerApp {
       double amount = view.getAmountField(); 
       String category = view.getCategoryField();
 
+      String validationMessage = InputValidation.validateInputs(amount, category);
+      if(!validationMessage.equals("Valid inputs")){
+         JOptionPane.showMessageDialog(view, validationMessage, "Input Error", JOptionPane.ERROR_MESSAGE);
+         return; // Stop processing further
+        }
+
       // Create transaction object
       Transaction t = new Transaction(amount, category);
 
