@@ -7,8 +7,8 @@ public class InputValidation {
     public static boolean validCategory(String category){
         String[] validCategories = {"food", "travel", "bills", "entertainment", "other"};
         
-        for(String validCateg : validCategories){
-            if(validCateg.equalsIgnoreCase(category)){
+        for(String i : validCategories){
+            if(i.equalsIgnoreCase(category)){
                 return true;
             }
         }
