@@ -1,14 +1,14 @@
 public class InputValidation {
 
     public static boolean validAmount(double amount) {
-        return amount > 0 && amount < 1000;
+        return amount < 1000 && amount > 0
     }
 
-    public static boolean validCategory(String category) {
+    public static boolean validCategory(String category){
         String[] validCategories = {"food", "travel", "bills", "entertainment", "other"};
         
-        for (String validCateg : validCategories) {
-            if (validCateg.equalsIgnoreCase(category)) {
+        for(String validCateg : validCategories){
+            if(validCateg.equalsIgnoreCase(category)){
                 return true;
             }
         }
