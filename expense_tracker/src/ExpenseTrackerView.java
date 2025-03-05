@@ -19,10 +19,10 @@ public class ExpenseTrackerView extends JFrame {
   
 
   public JTable getTransactionsTable() {
-    return transactionsTable;
+    return transactionsTable; //Returns the JTable used to display transactions
   }
 
-  public double getAmountField() {
+  public double getAmountField() { //Retrieves the amount entered by the user in the input field.
     if(amountField.getText().isEmpty()) {
       return 0;
     }else {
@@ -32,21 +32,21 @@ public class ExpenseTrackerView extends JFrame {
   }
 
   public void setAmountField(JTextField amountField) {
-    this.amountField = amountField;
-  }
+    this.amountField = amountField; //Sets the amountfield component
+  } 
 
   public String getCategoryField() {
-    return categoryField.getText();
+    return categoryField.getText(); //Retrieves the category entered by the user
   }
 
   public void setCategoryField(JTextField categoryField) {
-    this.categoryField = categoryField;
+    this.categoryField = categoryField; //Sets the categoryField component.
   }
 
-  public JButton getAddTransactionBtn() {
+  public JButton getAddTransactionBtn() { //Returns the Add Transaction button.
     return addTransactionBtn;
-  }
-  public DefaultTableModel getTableModel() {
+  } 
+  public DefaultTableModel getTableModel() { //Returns the DefaultTableModel used by the table.
     return model;
   }
 
@@ -88,7 +88,7 @@ public class ExpenseTrackerView extends JFrame {
   
   }
 
-  public void refreshTable(List<Transaction> transactions) {
+  public void refreshTable(List<Transaction> transactions) { //Refreshes the table with updated transaction data.
       // model.setRowCount(0);
       model.setRowCount(0);
       int rowNum = model.getRowCount();
@@ -110,7 +110,7 @@ public class ExpenseTrackerView extends JFrame {
   
     }  
 
-  public void refresh() {
+  public void refresh() { //Refreshes the view by fetching the latest transactions and updating the table.
 
     // Get transactions from model
     List<Transaction> transactions = getTransactions();
@@ -120,11 +120,11 @@ public class ExpenseTrackerView extends JFrame {
   
   }
 
-  public List<Transaction> getTransactions() {
+  public List<Transaction> getTransactions() { //retrieves transaction
     return transactions;
   }
   
-  public void addTransaction(Transaction t) {
+  public void addTransaction(Transaction t) { //adds transaction
     transactions.add(t);
     getTableModel().addRow(new Object[]{t.getAmount(), t.getCategory(), t.getTimestamp()});
     refresh();
