@@ -40,3 +40,9 @@ Here are some examples of violating ```non-functional``` requirements:
 
 ## Understandibility
 For the understandability section, we will be inspecting your git log. You should include either the .git folder or else a gitLog.(pdf | txt).
+
+The Expense Tracker Application lets users keep track of their finances and expenses by adding and removing their daily transactions.
+Add Transaction allows users to add a new transaction onto their dashboard by entering an amount and selecting a category.
+Display Transactions is a table that shows all the transactions that have been added by the user, displaying columns like Amount, Category, Date, etc.
+GUI that allows users to see their transactions in a displayed table.
+
