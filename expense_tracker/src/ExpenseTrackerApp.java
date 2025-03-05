@@ -5,7 +5,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ExpenseTrackerApp {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) { //Initializes the Model View Controller components and creates an instance of the view.
     
     // Create MVC components
     DefaultTableModel tableModel = new DefaultTableModel();
