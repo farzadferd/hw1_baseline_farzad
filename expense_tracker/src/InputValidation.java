@@ -1,7 +1,7 @@
 public class InputValidation {
 
     public static boolean validAmount(double amount) {
-        return amount < 1000 && amount > 0
+        return amount < 1000 && amount > 0;
     }
 
     public static boolean validCategory(String category){
